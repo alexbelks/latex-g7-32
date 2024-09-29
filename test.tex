@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{goststyle} % Подключение созданного стиля
+
+\usepackage{lipsum} % Для генерации "рыбы" (текст-заполнитель)
+
+
+\begin{document}
+\tableofcontents
+
+\structheading{Введение}
+\lipsum[1]
+
+\section{Проверка заголовков}
+\subsection{Подсекция}
+\lipsum[1]
+\subsubsection{\lipsum[3]} 
+\subsubsection{}\lipsum[4] % Можно и так
+\subsubsection{Так тоже можно}\lipsum[4] % Вот так с заголовком, но не по госту 
+\subsection{Еще подсекция}
+\lipsum[5]
+\section{Проверка перечислений}
+\begin{itemize}
+    \item \lipsum[6]
+    \item \lipsum[7]
+    \item \lipsum[8]
+\end{itemize}
+\begin{enumerate}
+    \item \lipsum[9]
+    \item Вложенны список
+    \begin{enumerate}
+        \item \lipsum[10]
+        \item \lipsum[11]
+    \end{enumerate}
+        \item \lipsum[12]
+\end{enumerate}
+
+\section{Формулы, таблицы и рисунки}
+Математическая модель представлена следующим уравнением: \begin{equation} E =
+mc^2 \end{equation}
+
+Результаты также можно представить в виде графиков (см. Рисунок \ref{fig:example}).
+
+
+\begin{figure}[H] \centering 
+    \includegraphics[width=0.5\textwidth]
+    {example-image} 
+    \caption{Пример графика} 
+    \label{fig:example}
+\end{figure}
+
+\begin{table}[H] \caption{Пример таблицы}\centering \begin{tabular}{|c|c|c|} \hline Столбец 1 & Столбец
+2 & Столбец 3 \\ \hline Ячейка 1 & Ячейка 2 & Ячейка 3 \\ Ячейка 4 & Ячейка 5 &
+Ячейка 6 \\ \hline \end{tabular}  \end{table}
+
+
+\structheading{ЗАКЛЮЧЕНИЕ}
+Краткое резюме проведенной работы и выводы.
+\lipsum[13]
+
+\application{Заголовок приложения}
+\lipsum[14]
+\begin{figure}[H] \centering \includegraphics[width=0.5\textwidth]
+{example-image} \caption{Пример графика} \label{fig:example} \end{figure}
+
+\begin{table}[h] \centering \begin{tabular}{|c|c|c|} \hline Столбец 1 & Столбец
+2 & Столбец 3 \\ \hline Ячейка 1 & Ячейка 2 & Ячейка 3 \\ Ячейка 4 & Ячейка 5 &
+Ячейка 6 \\ \hline \end{tabular} \caption{Пример таблицы} \end{table}
+\end{document}
