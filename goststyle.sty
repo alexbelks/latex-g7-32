@@ -85,7 +85,8 @@
 \captionsetup[table]{ labelformat=tableCustom}
 
 %Код для заголовков для приложений
-\titleclass{\application}{straight}[0]
+
+\titleclass{\application}{straight}[\section]
 \newcounter{application}
 \renewcommand{\theapplication}{\Alph{application}}
 
@@ -125,7 +126,6 @@
     {}
 \titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
 
-   
 \titleformat{\application}[display]
 {\clearpage\bfseries\fillast}
 {ПРИЛОЖЕНИЕ \theapplication}
@@ -137,7 +137,8 @@
 
 %Вызывает функцию для переформата для приложений
 \let\oldapplication\application
-\def\application#1{\applicationSetup \oldapplication{#1}}
+\let\oldapplication\application
+\def\application#1{ \applicationSetup \oldapplication{#1}}
 
 
 %Код для правильной работы \subsubsection
