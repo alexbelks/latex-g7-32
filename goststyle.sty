@@ -54,7 +54,7 @@
 }
 \makeatother
 
-% Установка начального размера шрифта (например, 12pt)
+% Установка начального размера шрифта (например, 12p)
 \AtBeginDocument{
     \setmainsize{12pt}
 }
@@ -86,8 +86,9 @@
 
 %Код для заголовков для приложений
 
-\titleclass{\application}{straight}[0]
+\titleclass{\application}[-1]{straight}
 \newcounter{application}
+%\setcounter{applicat}{1}
 \renewcommand{\theapplication}{\Alph{application}}
 
 \DeclareCaptionLabelFormat{tableAppCustom}{Таблица~\theapplication.#2}
