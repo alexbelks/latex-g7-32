@@ -24,7 +24,7 @@
     colorlinks=true,
     linkcolor=black,
     filecolor=black,
-    urlcolor=black,
+    urlcolor=blue,
     pdfauthor={Имя Автора},
     pdfkeywords={ключевые слова},
 }
@@ -54,7 +54,7 @@
 }
 \makeatother
 
-% Установка начального размера шрифта (например, 12p)
+% Установка начального размера шрифта (например, 12pt)
 \AtBeginDocument{
     \setmainsize{12pt}
 }
@@ -65,8 +65,8 @@
 \setlength{\myindent}{\parindent}
 
 % Полуторный интервал
-% \linespread{1.3}
-\onehalfspacing
+ \linespread{1.5}
+%\onehalfspacing
 
 
 % Межобзацный отступ
@@ -81,14 +81,13 @@
 \DeclareCaptionLabelFormat{tableCustom}{Таблица~#2}
 
 \captionsetup{labelsep =endash}
-\captionsetup[figure]{ labelformat=figCustom}
-\captionsetup[table]{ labelformat=tableCustom}
+\captionsetup[figure]{ labelformat=figCustom, font = large}
+\captionsetup[table]{ labelformat=tableCustom, font = large}
 
 %Код для заголовков для приложений
 
 \titleclass{\application}[-1]{straight}
 \newcounter{application}
-%\setcounter{applicat}{1}
 \renewcommand{\theapplication}{\Alph{application}}
 
 \DeclareCaptionLabelFormat{tableAppCustom}{Таблица~\theapplication.#2}
@@ -101,8 +100,8 @@
     \setcounter{table}{0}
     \clearcaptionsetup{figure}
     \clearcaptionsetup{table}
-    \captionsetup[figure]{ labelformat=figAppCustom}
-    \captionsetup[table]{ labelformat=tableAppCustom}
+    \captionsetup[figure]{ labelformat=figAppCustom, font = large}
+    \captionsetup[table]{ labelformat=tableAppCustom, font = large}
 }
 
 % Настройки заголовков секций
