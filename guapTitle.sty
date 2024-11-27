@@ -1,4 +1,5 @@
 \ProvidesPackage{guapTitle}
+\usepackage{stackengine}
 
 \newcommand{\guapTitle}[9]{
 \begin{titlepage}
@@ -91,5 +92,35 @@
    \vspace{2cm} 
    \begin{center} Санкт-Петербург 20#9 \end{center} 
    \vspace{3cm} 
+\end{titlepage}
+}
+
+\newcommand{\guapZadanKurse}[9]{
+\begin{titlepage}
+    \begin{center} МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ 
+        РОССИЙСКОЙ ФЕДЕРАЦИИ \\
+        Федеральное государственное автономное образовательное  
+        учреждение высшего образования \\ \vspace{0.3em}
+        «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ\\
+        АЭРОКОСМИЧЕСКОГО ПРИБОРОСТРОЕНИЯ»\\
+        \vspace{1cm} КАФЕДРА #1 \\ \vspace{1cm} 
+        {\bfseries Задание \\ на курсовой проект по дисцплине \\ "Объектно-ориентированное программирование" }\\ \vspace{1.5cm} 
+
+        Студенту группы\stackunder{\underline{\makebox[3cm]{#2}}}{№ группы}\hspace{1em}   \stackunder{\underline{\makebox[4cm]{#3}}}{Ф.И.О.} \\ \vspace{1.3cm} 
+
+        Тема «#4»\\ \vspace{1.3cm}
+        Исходные данные: #5 \\ \vspace{1.3cm}
+    \end{center}
+    Проект должен содержать:
+        \begin{itemize}
+            \item анализ предметной области
+            \item разработку классов
+            \item разработку тестового приложения
+            \item оформлениее пояснительной записки по результатам выполнения проекта
+            \item создание презентации к проекту
+        \end{itemize} \vspace{1.3cm}
+    Срок сдачи законченного проекта \underline{\makebox[6cm]{#6}}  \vspace{0.6cm} \\
+    Руководитель проекта \underline{\makebox[5cm]{#7}}ст.преп. Е.О.Шумова \vspace{1.3cm} \\
+    Дата выдачи задания  02.09.2024 г.
 \end{titlepage}
 }
